@@ -316,3 +316,10 @@ include vendor/clover/config/vanilla.mk
 endif
 
 -include $(WORKSPACE)/build_env/image-auto-bits.mk
+
+# IconShape
+$(call inherit-product, vendor/clover/themes/iconshapes/iconshapes.mk)
+
+# Permissions
+PRODUCT_COPY_FILES += \
+    vendor/clover/prebuilt/common/etc/permissions/privapp-permissions-settings.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/permissions/privapp-permissions-settings.xml
